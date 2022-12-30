@@ -1,0 +1,37 @@
+
+version: 2
+
+sources:
+  - name: staging
+    tables:
+      - name: dim_products
+      - name: dim_customer
+      - name: dim_order
+
+models:
+  - name: Dim_Customer
+    description:  "Customer model"
+    columns:
+      - name: id
+        description:  "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: Dim_Products
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: Dim_Order
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
